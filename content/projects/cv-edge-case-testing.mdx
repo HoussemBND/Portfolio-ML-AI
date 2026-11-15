@@ -1,0 +1,20 @@
+---
+title: Computer Vision Edge-Case Testing
+shortTitle: CV Edge-Case Testing
+slug: cv-edge-case-testing
+summary: Stress-tests a pre-trained vision model with blur, noise and lighting changes.
+status: planned
+tier: flagship
+order: 3
+areas: [computer vision, robustness]
+stack: [OpenCV, YOLO or ResNet]
+lifecycleStage: [Monitor & Evaluate]
+roles: [AI QA Engineer, Computer Vision Engineer]
+qaDuty: Edge-case and adversarial testing
+spec:
+  data: A handful of sample images plus a pre-trained YOLO or ResNet model. No training required.
+  tools: OpenCV for applying blur, noise and lighting perturbations.
+  deliverable: A script that runs the model on each original image and its perturbed versions, and reports where predictions changed or confidence dropped sharply.
+  definitionOfDone: A short report shows at least one perturbation type that breaks the model's prediction, with before and after examples.
+featured: true
+---

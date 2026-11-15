@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+.env*
+!.env.example
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+.claude/
+
+# Private planning notes, kept on this machine only
+docs/PRD.md

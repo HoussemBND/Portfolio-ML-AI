@@ -1,0 +1,20 @@
+---
+title: LLM Evaluation & Benchmarking
+shortTitle: LLM Evals
+slug: llm-evals
+summary: An automated test suite that scores an LLM against a golden dataset.
+status: planned
+tier: flagship
+order: 2
+areas: [evaluation, llm]
+stack: [DeepEval or RAGAS, LLM API, CI]
+lifecycleStage: [Monitor & Evaluate]
+roles: [AI QA Engineer, LLM Evaluation Engineer, AI / LLM Engineer]
+qaDuty: Golden-dataset evaluation, hallucination triage
+spec:
+  data: A small set of 20 to 50 question and answer pairs with known correct answers (a mini golden dataset).
+  tools: DeepEval or RAGAS, plus an LLM API.
+  deliverable: An automated test suite that runs the LLM against the golden set and reports hallucination rate and accuracy against ground truth.
+  definitionOfDone: The suite runs end to end and produces a pass or fail result per test case plus an aggregate score.
+featured: true
+---

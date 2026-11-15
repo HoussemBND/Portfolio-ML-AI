@@ -1,0 +1,20 @@
+---
+title: Automated Model Drift Detector
+shortTitle: Drift Detector
+slug: drift-detector
+summary: Flags when a deployed model's input data has shifted enough to need retraining.
+status: in-progress
+tier: flagship
+order: 1
+areas: [drift, monitoring]
+stack: [Python, Scikit-Learn, pandas, PSI]
+lifecycleStage: [Monitor & Evaluate]
+roles: [AI QA Engineer, Data Scientist / Data Analyst]
+qaDuty: Production monitoring and drift response
+spec:
+  data: A public tabular dataset (for example a Kaggle churn or credit dataset), split into a training window and a later window to simulate real-world drift.
+  tools: Python, Scikit-Learn or PyTorch, pandas, and a population stability index (PSI) calculation.
+  deliverable: A script or notebook that trains a baseline model, scores the later window and flags features whose distribution shifted beyond a threshold.
+  definitionOfDone: Run on two windows with known drift, it raises a flag. Run on two similar windows, it stays silent. A short README explains the approach.
+featured: true
+---
