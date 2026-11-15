@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { StatusBadge } from "@/components/status-badge";
 import { Todo } from "@/components/todo";
+import { certifications, earlierEducation, jobs } from "@/lib/experience";
 import { getAllProjects, getProjectsByTier } from "@/lib/projects";
 import { adjacentRoles, coursework } from "@/lib/roles";
 import { pageMeta, site } from "@/lib/site";
@@ -46,9 +47,9 @@ export default function AboutPage() {
       <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_18rem]">
         <div className="max-w-prose space-y-4 text-lg leading-relaxed">
           <p>
-            I spent 6+ years in software quality: building test automation,
-            leading quality work and deciding when a release was ready to
-            ship. {!site.yearsConfirmed && <Todo>confirm years</Todo>}
+            I have spent more than eight years in software quality: building
+            test automation, leading quality work and deciding when a release
+            was ready to ship.
           </p>
           <p>
             During my MS in AI & Machine Learning I saw that AI systems need
@@ -118,11 +119,24 @@ export default function AboutPage() {
 
       <section aria-labelledby="experience" className="mt-16">
         <SectionHeading id="experience">Experience</SectionHeading>
-        <p className="mt-4 rounded-lg border border-dashed border-line px-4 py-3 text-muted">
-          <Todo>work history</Todo> Employers, roles and dates go here, with
-          one or two results per role and one concrete Agile/Scrum leadership
-          example.
-        </p>
+        <ol className="mt-6 divide-y divide-line border-y border-line">
+          {jobs.map((job) => (
+            <li key={job.company} className="grid gap-x-6 gap-y-3 py-6 sm:grid-cols-[1fr_1.6fr]">
+              <div>
+                <h3 className="font-semibold">{job.title}</h3>
+                <p className="mt-0.5">{job.company}</p>
+                <p className="mt-1 text-sm text-muted">{job.place}</p>
+                <p className="mt-1 font-mono text-xs text-muted">{job.dates}</p>
+                {job.note && <p className="mt-1 text-sm text-muted">{job.note}</p>}
+              </div>
+              <ul className="list-disc space-y-1.5 pl-5 text-sm leading-relaxed">
+                {job.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <section aria-labelledby="education" className="mt-16">
@@ -134,6 +148,16 @@ export default function AboutPage() {
           {", "}
           {site.graduated ?? <Todo>month/year</Todo>}
         </p>
+        {earlierEducation.map((e) => (
+          <p key={e.degree} className="mt-2 text-lg">
+            <span className="font-medium">{e.degree}</span>, {e.school}, {e.date}
+          </p>
+        ))}
+        {certifications.map((c) => (
+          <p key={c.name} className="mt-2 text-lg">
+            <span className="font-medium">{c.name}</span>, {c.date}
+          </p>
+        ))}
         <p className="mt-6 max-w-prose text-muted">
           Coursework most relevant to AI quality work. These are supporting
           evidence; the projects are where the skills are applied.

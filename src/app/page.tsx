@@ -88,7 +88,7 @@ function Hero() {
           <div>
             <dt className="text-xs text-muted">background</dt>
             <dd className="mt-0.5">
-              6+ yrs test automation and quality leadership
+              {site.years} yrs test automation and quality leadership
             </dd>
           </div>
           <div>

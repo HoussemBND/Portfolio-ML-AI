@@ -15,25 +15,26 @@ export const site = {
    * engines are told not to index the site.
    */
   launched: false,
-  name: null as string | null,
+  name: "Houssem Boundaoui" as string | null,
   headline: "Senior Software QA & Machine Learning Evaluation Engineer",
   pitch:
     "I test AI systems the way I tested software: with automated suites, golden datasets and evidence, before problems reach production.",
   summary:
-    "Senior Software Quality Engineer with a Master of Science in AI & Machine Learning. Combines 6+ years of software test automation and quality leadership with expertise in neural networks, computer vision, and model validation pipelines.",
-  /** The roadmap says "6+ years"; set to true once you confirm it. */
-  yearsConfirmed: false,
+    "Senior Software Quality Engineer with a Master of Science in AI & Machine Learning. Combines 8+ years of software test automation and quality leadership with expertise in neural networks, computer vision, and model validation pipelines.",
+  /** QA work since June 2018, confirmed from the resume. */
+  years: "8+",
+  yearsConfirmed: true,
   location: "Denver, CO",
   remote: "Open to remote",
   degree: "MS in AI & Machine Learning",
-  university: null as string | null,
-  graduated: null as string | null,
+  university: "Colorado State University Global" as string | null,
+  graduated: "2026" as string | null,
   /** Path under /public, for example "/cv.pdf". */
   cvUrl: null as string | null,
   links: {
-    github: null as string | null,
-    linkedin: null as string | null,
-    email: null as string | null,
+    github: "https://github.com/HoussemBND" as string | null,
+    linkedin: "https://www.linkedin.com/in/houssem-boundaoui" as string | null,
+    email: "houssemboundaoui@gmail.com" as string | null,
   },
 };
 

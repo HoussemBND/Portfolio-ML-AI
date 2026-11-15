@@ -39,7 +39,6 @@ const skills: Skill[] = [
     base: ["work", "course"],
     courses: ["CSC500 onward"],
     projects: ["drift-detector", "llm-evals", "cv-edge-case-testing"],
-    todo: "confirm use at work",
   },
   { name: "R, ggplot2", stage: "Build & Train", base: ["course"], courses: ["MIS446"] },
   {
@@ -71,7 +70,6 @@ const skills: Skill[] = [
     stage: "Orchestrate & Retrain",
     base: ["work"],
     projects: ["llm-evals"],
-    todo: "confirm use at work",
   },
   { name: "Airflow or Kubeflow Pipelines", stage: "Orchestrate & Retrain" },
   {
@@ -102,10 +100,15 @@ const skills: Skill[] = [
     projects: ["fairness-audit"],
   },
   {
-    name: "Test automation, Git, Agile/Scrum leadership",
+    name: "Test automation (Cypress, Selenium), Git",
     stage: "Across stages",
     base: ["work"],
-    todo: "confirm",
+  },
+  {
+    name: "Agile/Scrum leadership",
+    stage: "Across stages",
+    base: ["work"],
+    todo: "add one concrete example",
   },
 ];
 
